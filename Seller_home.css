@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html
+{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.nav_menu_options {
+    list-style-type:none;
+    display: inline;
+}
+
+.nav_menu_options a{
+    text-decoration: none;
+    color: black;
+    display: inline;
+    margin: 15px;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.navbar {
+    background-color:rgb(140, 252, 147); 
+    padding: 1em;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.banner_section
+{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 600px;
+    background-color: rgb(227, 252, 231);
+    padding: 0 50px; 
+}
+
+.intro 
+{
+    width: 50%; 
+    margin-bottom: 20px;
+}
+
+.intro .name {
+    color: rgb(2, 53, 17);
+    font-family: "Nunito", sans-serif;
+    font-size: 65px;
+    padding-top: 200px;
+}
+
+.intro .tagline {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 15px;
+}
+
+.sell_now_btn {
+    font-size: 15px;
+    background-color: rgb(4, 80, 25);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+.banner_section_farmer {
+    width: 50%; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.banner_section_farmer img {
+    height: 400px; 
+    width: auto; 
+    max-width: 100%; 
+    margin-left: auto;
+}
