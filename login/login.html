@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container" id="welcome-container">
+    <h1>Welcome to Contrafarm!</h1>
+    <h2>Select Your Role</h2>
+    <div class="user-type">
+        <button onclick="showSection('seller')">Seller</button>
+        <button onclick="showSection('buyer')">Buyer</button>
+    </div>
+</div>
+
+<!-- Seller Section -->
+<div id="seller" class="form-container" style="display: none;">
+    <h2>Seller Login</h2>
+    <form id="seller-login-form">
+        <label for="seller-email">Email:</label><i class="fas fa-envelope"></i>
+        <input type="email" id="seller-email" required>
+        
+        <label for="seller-password">Password:</label><i class="fas fa-lock"></i>
+        <input type="password" id="seller-password" required>
+        
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" onclick="toggleSignup('seller')">Signup here</a></p>
+        <button type="button" onclick="backToWelcome()">Back</button>
+    </form>
+
+    <div id="seller-signup" style="display: none;">
+        <h2>Seller Signup</h2>
+        <form id="seller-signup-form">
+            <label for="seller-name">Name:</label><i class="fas fa-user"></i>
+            <input type="text" id="seller-name" required>
+
+            <label for="seller-email-signup">Email:</label><i class="fas fa-envelope"></i>
+            <input type="email" id="seller-email-signup" required>
+
+            <label for="seller-password-signup">Password:</label><i class="fas fa-lock"></i>
+            <input type="password" id="seller-password-signup" required>
+
+            <label for="seller-location-signup">Location:</label><i class="fas fa-location"></i>
+            <input type="text" id="seller-location-signup" required>
+
+            <div class="payment-details">
+                <h3>Payment Details</h3>
+                <div class="radio-group">
+                    <input type="radio" id="gst" name="payment" value="gst" onclick="showPaymentInput('gstInput')" checked>
+                    <label for="gst"><i class="fas fa-address-card"></i> GST Number</label><br>
+                    <input type="radio" id="pan" name="payment" value="pan" onclick="showPaymentInput('panInput')">
+                    <label for="pan"><i class="fas fa-id-card"></i> PAN Number</label><br>
+                    <input type="radio" id="account" name="payment" value="account" onclick="showPaymentInput('accountInput')">
+                    <label for="account"><i class="fas fa-university"></i> Bank Account Number</label><br>
+                    <input type="radio" id="upi" name="payment" value="upi" onclick="showPaymentInput('upiInput')">
+                    <label for="upi"><i class="fas fa-mobile-alt"></i> UPI ID</label>
+                </div>
+
+                <div class="input-box" id="gstInput">
+                    <i class="fas fa-address-card"></i>
+                    <input type="text" placeholder="Enter GST Number">
+                </div>
+                <div class="input-box" id="panInput" style="display:none;">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" placeholder="Enter PAN Number">
+                </div>
+                <div class="input-box" id="accountInput" style="display:none;">
+                    <i class="fas fa-university"></i>
+                    <input type="text" placeholder="Enter Bank Account Number">
+                </div>
+                <div class="input-box" id="upiInput" style="display:none;">
+                    <i class="fas fa-mobile-alt"></i>
+                    <input type="text" placeholder="Enter UPI ID">
+                </div>
+            </div>
+            <button type="submit">Signup</button>
+            <button type="button" onclick="backToLogin('seller')">Back to Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- Buyer Section -->
+<div id="buyer" class="form-container" style="display: none;">
+    <h2>Buyer Login</h2>
+    <form id="buyer-login-form">
+        <label for="buyer-email">Email:</label><i class="fas fa-envelope"></i>
+        <input type="email" id="buyer-email" required>
+
+        <label for="buyer-password">Password:</label><i class="fas fa-lock"></i>
+        <input type="password" id="buyer-password" required>
+
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" onclick="toggleSignup('buyer')">Signup here</a></p>
+        <button type="button" onclick="backToWelcome()">Back</button>
+    </form>
+
+    <div id="buyer-signup" style="display: none;">
+        <h2>Buyer Signup</h2>
+        <form id="buyer-signup-form">
+            <label for="buyer-name">Name:</label>
+            <input type="text" id="buyer-name" required>
+
+            <label for="buyer-email-signup">Email:</label>
+            <input type="email" id="buyer-email-signup" required>
+
+            <label for="buyer-password-signup">Password:</label>
+            <input type="password" id="buyer-password-signup" required>
+
+            <label for="buyer-location-signup">Location:</label>
+            <input type="text" id="buyer-location-signup" required>
+
+            <h3>Buyer Type</h3>
+            <div class="radio-group">
+                <input type="radio" id="individual-buyer" name="buyer-type" value="individual" checked>
+                <label for="individual-buyer">Individual Buyer</label><br>
+                <input type="radio" id="mass-buyer" name="buyer-type" value="mass">
+                <label for="mass-buyer">Mass Buyer</label>
+            </div>
+
+            <button type="submit">Signup</button>
+            <button type="button" onclick="backToLogin('buyer')">Back to Login</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function showSection(section) {
+    // Hide welcome container
+    document.getElementById('welcome-container').style.display = 'none';
+    
+    // Show the selected section and hide the other
+    document.getElementById('seller').style.display = section === 'seller' ? 'block' : 'none';
+    document.getElementById('buyer').style.display = section === 'buyer' ? 'block' : 'none';
+    
+    // Hide any signup forms if visible
+    document.getElementById('seller-signup').style.display = 'none';
+    document.getElementById('buyer-signup').style.display = 'none';
+}
+
+function toggleSignup(type) {
+    if (type === 'seller') {
+        document.getElementById('seller-login-form').style.display = 'none';
+        document.getElementById('seller-signup').style.display = 'block';
+    } else {
+        document.getElementById('buyer-login-form').style.display = 'none';
+        document.getElementById('buyer-signup').style.display = 'block';
+    }
+}
+
+function showPaymentInput(inputId) {
+    // Hide all payment input boxes
+    document.getElementById('gstInput').style.display = 'none';
+    document.getElementById('panInput').style.display = 'none';
+    document.getElementById('accountInput').style.display = 'none';
+    document.getElementById('upiInput').style.display = 'none';
+    
+    // Show the selected payment input box
+    document.getElementById(inputId).style.display = 'block';
+}
+
+function backToLogin(type) {
+    if (type === 'seller') {
+        document.getElementById('seller-signup').style.display = 'none';
+        document.getElementById('seller-login-form').style.display = 'block';
+    } else {
+        document.getElementById('buyer-signup').style.display = 'none';
+        document.getElementById('buyer-login-form').style.display = 'block';
+    }
+}
+
+function backToWelcome() {
+    // Hide seller and buyer sections, show welcome screen
+    document.getElementById('seller').style.display = 'none';
+    document.getElementById('buyer').style.display = 'none';
+    document.getElementById('welcome-container').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
