@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Contract</title>
+    <link rel="stylesheet" href="contract_buyer.css">
+</head>
+<body>
+
+    <div class="contract-form">
+        <h2>Buyer Contract Form</h2>
+        <form id="buyerContractForm">
+            <!-- Form fields for buyer to send contract to seller -->
+            <label for="buyerName">Buyer’s Name:</label>
+            <input type="text" id="buyerName" placeholder="Enter Buyer's Name" required>
+
+            <label for="sellerName">Seller’s Name:</label>
+            <input type="text" id="sellerName" placeholder="Enter Seller's Name" required>
+
+            <label for="cropType">Type of Crop:</label>
+            <input type="text" id="cropType" placeholder="Enter Type of Crop" required>
+
+            <label for="amount">Amount of Crop (in units):</label>
+            <input type="number" id="amount" placeholder="Enter Amount of Crop" min="0" required>
+
+            <label for="price">Price per Unit:</label>
+            <input type="number" id="price" placeholder="Enter Price per Unit" min="0" required>
+
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" id="deliveryDate" required>
+
+            <label for="paymentDue">Payment Due (days after delivery):</label>
+            <input type="number" id="paymentDue" placeholder="Enter Payment Due Days" min="0" required>
+
+            <!-- Contract Period Section -->
+            <label for="contractPeriod">Contract Period:</label>
+            <input type="number" id="contractPeriod" placeholder="Enter Contract Period" min="0" required>
+
+            <label for="periodUnit">Select Period Unit:</label>
+            <select id="periodUnit" required>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+                <option value="years">Years</option>
+            </select>
+
+            <button type="button" id="sendContractButton">Send Contract to Seller</button>
+        </form>
+
+        <!-- Contract preview section -->
+        <div id="contractPreview" class="contract-preview"></div>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="contract_buyer.js"></script>
+
+</body>
+</html>
