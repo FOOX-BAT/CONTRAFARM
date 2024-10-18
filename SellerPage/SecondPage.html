@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="First page.css" href="First page.css">
+        <style>
+            
+            header {
+            background-color: rgb(5, 80, 50);
+        }
+        .nav {
+            overflow: hidden;
+        }
+        .nav a {
+            float:right;
+            color: rgb(241, 243, 245);
+            text-align: center;
+            padding: 50px 60px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .nav a:hover {
+            color: white;
+            background-color: rgb(7, 152, 7);
+        }
+        .nav a.active {
+            background-color: rgb(7, 70, 7);
+            color: white;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .search-box {
+    width: 800px; /* Adjust the width as needed */
+    padding: 10px; /* Optional: adds space inside the box */
+    font-size: 16px; /* Optional: increases text size */
+    border: 1px solid #ccc; /* Optional: adds a border */
+    border-radius: 14px; /* Optional: rounds the corners */
+    text-align: center;
+}
+        .Fruits-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center items */
+            margin-top: 20px;
+        }
+
+        .item {
+            border: 1px solid #dddddd;
+            margin: 20px; /* Space between items */
+            border-radius: 15px;
+            padding: 15px;
+            width: 250px; /* Fixed width for items */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: rgb(5, 80, 50);
+            padding-top: 10px;
+            padding-bottom: 10px;
+           .nav2 {
+           overflow: hidden;
+       }
+       .nav2 a {
+          
+           color: rgb(241, 243, 245);
+           text-align: center;
+        
+           text-decoration: none;
+           font-size: 20px;
+       }
+
+        }
+</style>
+
+
+    
+    </head>
+    <header>
+        <div class="nav">
+            <a href="#Home">Home</a>
+            <a href="#My Shop">My Shop</a>
+            <a href="#Profile">Profile</a>
+            <a href="#Support">Support</a>
+            <link rel="First page.css" href="First page.css">
+        </div>
+    </header>
+    <body>
+        <div class="Fruits">
+        <h1>Search fruits</h1>
+        <input type="text" id="searchBar" class="search-box"placeholder="Search for fruits...." onkeyup="filterFruits()">
+        <div class="Fruits-list">
+
+           
+            <div class="item">
+                <h1>Apple</h1>
+                <img src="Apple.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+            
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+
+                <div class="item">
+                <h1>Banana</h1>
+                <img src="Banana.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+                    
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+            <div class="item">
+                <h1>Strawberry</h1>
+                <img src="Strawberry.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+                
+            
+            <div class="item">
+                <h1>Orange</h1>
+                <img src="Orange.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+            
+            <div class="item">
+                <h1>Grapes</h1>
+                <img src="Grapes.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+
+            <div class="item">
+                <h1>Watermelon</h1>
+                <img src="Watermelon.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+                    
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+
+            <div class="item">
+                <h1>Pineapple</h1>
+                <img src="Pineapple.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+                    
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+
+            <div class="item">
+                <h1>Mango</h1>
+                <img src="Mango.jpg" width="200" height="200">
+                <br>
+                <form id="add-product-form">
+
+                   
+                    <label for="price">Price (Rupees):</label>
+                <input type="number" id="price" step="1" required>
+                <br>
+
+                <label for="quantity">Quantity(Kg):</label>
+                <input type="number" id="quantity" required>
+                <br>
+
+                <button type="submit">Add Fruit</button>
+                
+                </form>
+            </div>
+                
+
+        
+        
+          </div>
+       
+          <button>View Contract</button> 
+            <h3>Your Listed Fruits</h3>
+            <div id="seller-products"></div>
+       
+     
+       
+       
+        
+            
+        
+        <script src="Second-Page.js" async defer></script>
+    </div>
+    </body>
+    <footer>
+        <div class="nav2">
+        <a href="#Fee and pricing">Fee and pricing</a>
+        <br>
+        <a href="#Offers for sellers">Offers for sellers</a>
+        <br>
+        <a href="#Sell Globally">Sell Globally</a>
+        <br>
+        <a href="#Grow your business">Grow your business</a>
+        <br>
+        
+    
+        <a href="#Reach us">Reach us</a>
+        <br>
+        <a href="#Instagram">Instagram</a>
+        <br>
+        <a href="#Facebook">Facebook</a>
+        <br>
+        <a href="#Youtube">Youtube</a>
+        <br>
+        <a href="#Linkedin">Linkedin</a>
+        <br>
+        <a href="#Help">Help</a>
+        
+    </div>
+    </footer>
+</html>
