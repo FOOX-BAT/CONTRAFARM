@@ -1,2 +1,0 @@
-# CONTRAFARM
-Mini Project
