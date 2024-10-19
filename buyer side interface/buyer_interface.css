@@ -1,0 +1,120 @@
+/* General Body Styles */
+body {
+    background-color: #e9f5e9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: right;
+    padding-right: 30px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Full Circle Image with Shadow */
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 400px;  /* Increased size */
+    height: 400px;  /* Increased size */
+    background-color: #e9f5e9;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Added shadow */
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Content */
+.text-content {
+    margin-top: 30px;  /* Increased space from the circle */
+    margin-left: 100px;  /* Shifted text further to the left */
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif; /* E-commerce font for logo */
+    font-size: 48px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.tagline {
+    font-family: 'Roboto', sans-serif; /* Professional font for tagline */
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 20px; /* Increased space below the logo */
+}
+
+.text-content p {
+    font-family: 'Roboto', sans-serif; /* Professional font for description */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Call to Action Button */
+.cta-container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #45a049;
+}
